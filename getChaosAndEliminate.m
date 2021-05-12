@@ -1,6 +1,5 @@
 % getChaosAndEliminate.m
 %getScrewAndEliminate.m
-clean
 
 %% Constant
 eps = 0.02; 
@@ -26,15 +25,17 @@ for k = 1 : length(t)
        if( abs(t(k) - 26.964000000000000) < 1e-4)
             u(169 - 20 : 169 + 20,floor(nx/2):end) = 0;
        end
-% % get Chaos
-%     if(t(k) > 90)
-%         eps = 0.12;
-%     end
+       get Chaos
+      if(t(k) > 90)
+          eps = 0.12;
+      end
     if(t(k) >= 90.1620 && t(k) <= 155)
         eps = 0.12;
     end
     if( t(k) > 155)
         eps = 0.02;
+
+%16点源消除
 %     u( floor(nx/8),floor(ny/8) ) = 0.5;
 %     u( floor(nx*3/8),floor(ny/8) ) = 0.5;
 %     u( floor(nx*5/8),floor(ny/8) ) = 0.5;
@@ -51,10 +52,19 @@ for k = 1 : length(t)
 %     u( floor(nx*3/8),floor(ny*7/8) ) = 0.5;
 %     u( floor(nx*5/8),floor(ny*7/8) ) = 0.5;
 %     u( floor(nx*7/8),floor(ny*7/8) ) = 0.5;
- u(1,1:end) = 0.9;
- u(1:end,1) = 0.9;
- u(end,1:end) = 0.9;
- u(1:end,end)= 0.9;
+
+    %四向消除
+     % u(1,1:end) = 0.9;
+     % u(1:end,1) = 0.9;
+     % u(end,1:end) = 0.9;
+     % u(1:end,end)= 0.9;
+
+   %双向消除
+   % u(1,1:end) = 0.9;
+   % u(end,1:end) = 0.9;
+
+   %单向消除
+    u(1,1:end) = 0.9;
     end
 
 %% operate for the function
