@@ -1,5 +1,4 @@
 %getScrewAndEliminate.m
-clean
 
 %% Constant
 eps = 0.02; 
