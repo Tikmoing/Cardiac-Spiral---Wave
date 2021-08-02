@@ -4,7 +4,7 @@ This  code is based on Dwight Barkley Model. \
 Reference website：
 http://www.thevirtualheart.org/webgl/DS_SIAM/barkley.html
 
-## How to generate parallel and circular waves
+## Generate parallel and circular waves
 
 Filename : *getSteadyStateWave.m*
 
@@ -20,7 +20,7 @@ for k = 1 : length(t)
 ```
 ![PC](https://raw.githubusercontent.com/Tikmoing/Cardiac-Spiral-Wave-BDM/main/images/PC.jpg)
 
-## How to generate spiral waves:
+## Generate spiral waves:
 
 FileName : *getScrewAndEliminate.m*
 
